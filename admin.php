@@ -1,5 +1,6 @@
 <?php
 
+include 'users.php';
 
 class Admin extends User
 {
@@ -9,7 +10,33 @@ class Admin extends User
     {
         setUsername($username);
         setPassword($password);
-        $this->accessLevel = "user";
+        $this->accessLevel = "admin";
+    }
+    //methods
+
+    function editUser($user){
+
+
+        echo "editing username";
+    }
+
+
+    //setters and getters
+
+    /**
+     * @param string $accessLevel
+     */
+    public function setAccessLevel($accessLevel)
+    {
+        $this->accessLevel = $accessLevel;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAccessLevel()
+    {
+        return $this->accessLevel;
     }
 
 }
