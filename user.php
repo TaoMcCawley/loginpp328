@@ -12,14 +12,24 @@ class User
     private $password;
     private $loggedIn;
 
+    /**
+     * User constructor.
+     */
     function __construct()
     {
-        $username = "";
-        $password = "";
-        $loggedIn = false;
+        $this->username = "";
+        $this->password = "";
+        $this->loggedIn = false;
     }
 
     // methods
+
+    /**
+     * Login method for a user
+     *
+     * @param $username Username of the person trying to login
+     * @param $password Password of the person trying to login
+     */
     function login($username, $password) {
         include 'users.php';
         // check if $username and $password key value pair is inside defined array
@@ -38,21 +48,41 @@ class User
         echo "<p>Login error</p>";
     }
 
+    /**
+     * Logs the user out by setting everything to it's construct phase.
+     *
+     */
     function logout() {
-
+        construct();
     }
 
     // getters and setters
+
+    /**
+     * This function returns a username
+     *
+     * @return string The username of the class
+     */
     function getUsername()
     {
         return $this->username;
     }
 
+    /**
+     * Sets a the user variable
+     *
+     * @param $username The username we are working with
+     */
     function setUsername($username)
     {
         $this->username = $username;
     }
 
+    /**
+     * THe password we are working with, cannot be less than 6 characters
+     *
+     * @param $password The password we are using
+     */
     function setPassword($password)
     {
         if(strlen($password) >= 6) {
