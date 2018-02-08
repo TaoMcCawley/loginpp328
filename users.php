@@ -7,5 +7,5 @@
  * Time: 10:12 AM
  */
 
-$loginArray = array('username'=>'password', 'marco'=>'polo', 'Tina'=>'bestteacherever');
+$loginArray = array('username'=>'password', 'marco'=>'polo234', 'Tina'=>'bestteacherever');
 

@@ -39,13 +39,14 @@ class User
                 if ($pw == $password) {
                     echo "<p>$username is logged in.</p>";
                     $this->loggedIn = true;
-                } else {
-                    echo "<p>Login error</p>";
                 }
             }
         }
         // if user not found
-        echo "<p>Login error</p>";
+        if($this->loggedIn == false) {
+            echo "<p>Login error</p>";
+        }
+
     }
 
     /**

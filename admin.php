@@ -8,16 +8,20 @@ class Admin extends User
 
     function __construct($username, $password, $accessLevel)
     {
-        setUsername($username);
-        setPassword($password);
-        $this->accessLevel = "admin";
+        parent::__construct();
+
+        $this->setUsername($username);
+        $this->setPassword($password);
+
+        $this->accessLevel = $accessLevel;
+
+
     }
     //methods
 
     function editUser($user){
-
-
-        echo "editing username";
+        $username = $user->getUsername();
+        echo "editing ".$username;
     }
 
 
